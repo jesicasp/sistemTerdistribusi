@@ -116,7 +116,7 @@ class _DataMahasiswaState extends State<DataMahasiswa> {
                             },
                             icon: Icon(
                               Icons.grade,
-                              color: Colors.blue.shade300,
+                              color: Colors.amber,
                               size: 24,
                             )),
                         IconButton(

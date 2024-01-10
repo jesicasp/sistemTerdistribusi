@@ -23,18 +23,27 @@ class _NilaiMahasiswaState extends State<NilaiMahasiswa> {
   }
 
   Future<void> mahasiswaAll() async {
-    String urlAll = "http://10.0.2.2:9003/api/v1/nilai/$id";
-    try {
-      var response = await http.get(Uri.parse(urlAll));
+  String urlAll = "http://10.0.2.2:9003/api/v1/nilai/$id";
+  try {
+    var response = await http.get(Uri.parse(urlAll));
+
+    // Print the response body
+    print(response.body);
+
+    if (response.statusCode == 200) {
       List<dynamic> data = jsonDecode(response.body);
 
       setState(() {
         listSemua = List.from(data);
       });
-    } catch (e) {
-      print(e);
+    } else {
+      print("Failed to load data: ${response.statusCode}");
     }
+  } catch (e) {
+    print("Error: $e");
   }
+}
+
 
   @override
   Widget build(BuildContext context) {
@@ -58,13 +67,13 @@ class _NilaiMahasiswaState extends State<NilaiMahasiswa> {
                   child: ListTile(
                     leading: Icon(
                       Icons.pin_outlined,
-                      color: Colors.green.shade500,
+                      color: Colors.indigo,
                       size: 24,
                     ),
                     title: Text(
                       listSemua[index]["mahasiswa"]["nama"],
                       style: TextStyle(
-                          color: Colors.green,
+                          color: Colors.indigo,
                           fontSize: 17,
                           fontWeight: FontWeight.bold),
                     ),

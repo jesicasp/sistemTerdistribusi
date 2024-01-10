@@ -114,7 +114,7 @@ class _UpdateMahasiswaState extends State<UpdateMahasiswa> {
                     borderRadius: BorderRadius.circular(10),
                   ),
                   fillColor: Colors.indigo.shade200,
-                  prefixIcon: Icon(Icons.calendar_today),
+                  prefixIcon: Icon(Icons.calendar_month_rounded),
                 ),
                 onTap: () => _pilihTgl(context),
                 controller: TextEditingController(

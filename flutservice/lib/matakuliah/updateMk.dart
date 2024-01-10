@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
-// ignore: must_be_immutable
+
 class UpdateMatakuliah extends StatefulWidget {
   int idup;
   String kodeup;
@@ -41,7 +41,8 @@ class _UpdateMatakuliahState extends State<UpdateMatakuliah> {
   Future<void> updateMatakuliah() async {
     if (isNumeric(sks.text)) {
       String urlUpdate =
-          "http://10.0.2.2:9002/api/v1/matakuliah/${id}?kode=${kode.text}&&email=${nama.text}&&sks=${sks.text}";
+          "http://10.0.2.2:9002/api/v1/matakuliah/${id}?kode=${kode.text}&&nama=${nama.text}&&sks=${sks.text}";
+          
       try {
         var response = await http.put(Uri.parse(urlUpdate));
 

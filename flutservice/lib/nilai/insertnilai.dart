@@ -34,23 +34,21 @@ class _InsertNilaiState extends State<InsertNilai> {
       "nilai": int.parse(nilai.text)
     };
 
-    try {
-      var response = await http.post(Uri.parse(urlInsert),
-          body: jsonEncode(data),
-          headers: {'Content-Type': 'application/json'});
+   try {
+  var response = await http.post(Uri.parse(urlInsert),
+      body: jsonEncode(data),
+      headers: {'Content-Type': 'application/json'});
 
-      if (response.statusCode == 200) {
-        Navigator.pop(context, "berhasil");
-      } else {
-        print("Gagal");
-      }
-    } catch (e) {
-      print("Exception: $e");
-    }
+  if (response.statusCode == 200) {
+    Navigator.pop(context, "berhasil");
   } else {
-    print("Bukan Angka Desimal");
+    print("Gagal");
+    print("Response: ${response.body}");
   }
+} catch (e) {
+  print("Exception: $e");
 }
+  }}
 
 
   @override
