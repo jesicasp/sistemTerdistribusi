@@ -35,7 +35,6 @@ class _UpdateNilaiState extends State<UpdateNilai> {
   }
 
   bool isNumeric(String str) {
-    // ignore: unnecessary_null_comparison
     if (str == null || str.isEmpty) {
       return false;
     }
@@ -100,7 +99,7 @@ class _UpdateNilaiState extends State<UpdateNilai> {
       ),
       body: Center(
         child: Container(
-          margin: EdgeInsets.fromLTRB(0, 100, 0, 0),
+          margin: EdgeInsets.fromLTRB(0, 20, 0, 0),
           width: 800,
           padding: EdgeInsets.all(16),
           child: Column(
@@ -120,7 +119,7 @@ class _UpdateNilaiState extends State<UpdateNilai> {
                 decoration: InputDecoration(
                   labelText: "ID Mahasiswa",
                   hintText: "Pilih Mahasiswa",
-                  prefixIcon: Icon(Icons.person_pin_outlined),
+                  prefixIcon: Icon(Icons.person_3_outlined),
                   fillColor: Colors.indigo.shade200,
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10),
@@ -143,7 +142,7 @@ class _UpdateNilaiState extends State<UpdateNilai> {
                 decoration: InputDecoration(
                   labelText: "ID Matakuliah",
                   hintText: "Pilih Matakuliah",
-                  prefixIcon: Icon(Icons.bookmark_border),
+                  prefixIcon: Icon(Icons.book_outlined),
                   fillColor: Colors.indigo.shade200,
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10),
@@ -156,7 +155,7 @@ class _UpdateNilaiState extends State<UpdateNilai> {
                 decoration: InputDecoration(
                   labelText: "Nilai",
                   hintText: "Ketikkan Jumlah Nilai",
-                  prefixIcon: Icon(Icons.numbers_rounded),
+                  prefixIcon: Icon(Icons.grade),
                   fillColor: Colors.indigo.shade200,
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10),

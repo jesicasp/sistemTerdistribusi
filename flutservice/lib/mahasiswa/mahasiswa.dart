@@ -92,14 +92,14 @@ class _DataMahasiswaState extends State<DataMahasiswa> {
                       listMahasiswa[index]["nama"]?.toString() ?? "",
                       style: TextStyle(
                           color: Colors.indigo,
-                          fontSize: 17,
+                          fontSize: 20,
                           fontWeight: FontWeight.bold),
                     ),
                     subtitle: Text(
                       "Email : ${listMahasiswa[index]["email"]?.toString() ?? ""}\nTanggal Lahir : ${listMahasiswa[index]["tglLahir"]?.toString() ?? ""}",
                       style: TextStyle(
                           color: Colors.black,
-                          fontSize: 13,
+                          fontSize: 17,
                           fontWeight: FontWeight.normal),
                     ),
                     trailing: Row(
@@ -117,16 +117,6 @@ class _DataMahasiswaState extends State<DataMahasiswa> {
                             icon: Icon(
                               Icons.grade,
                               color: Colors.amber,
-                              size: 24,
-                            )),
-                        IconButton(
-                            tooltip: "Hapus Data",
-                            onPressed: () {
-                              deleteMahasiwa(listMahasiswa[index]["id"]);
-                            },
-                            icon: Icon(
-                              Icons.delete_outline,
-                              color: Colors.red.shade300,
                               size: 24,
                             )),
                         IconButton(
@@ -148,6 +138,16 @@ class _DataMahasiswaState extends State<DataMahasiswa> {
                             icon: Icon(
                               Icons.edit_document,
                               color: Colors.purple,
+                              size: 24,
+                            )),
+                        IconButton(
+                            tooltip: "Hapus Data",
+                            onPressed: () {
+                              deleteMahasiwa(listMahasiswa[index]["id"]);
+                            },
+                            icon: Icon(
+                              Icons.delete_outline,
+                              color: Colors.red.shade300,
                               size: 24,
                             )),
                       ],

@@ -73,7 +73,7 @@ class _UpdateMahasiswaState extends State<UpdateMahasiswa> {
       ),
       body: Center(
         child: Container(
-          margin: EdgeInsets.fromLTRB(0, 100, 0, 0),
+          margin: EdgeInsets.fromLTRB(0, 20, 0, 0),
           width: 800,
           padding: EdgeInsets.all(16),
           child: Column(

@@ -121,29 +121,19 @@ class _DataNilaiState extends State<DataNilai> {
                       "${namaMahasiswa.firstWhere((mahasiswa) => mahasiswa["id"] == listNilai[index]["mahasiswa_id"], orElse: () => {})["nama"] ?? ""}",
                       style: TextStyle(
                           color: Colors.indigo,
-                          fontSize: 17,
+                          fontSize: 20,
                           fontWeight: FontWeight.bold),
                     ),
                     subtitle: Text(
                       "Matakuliah: ${namaMatakuliah.firstWhere((matakuliah) => matakuliah["id"] == listNilai[index]["matakuliah_id"], orElse: () => {})["nama"] ?? ""}\nNilai: ${listNilai[index]["nilai"]}",
                       style: TextStyle(
                           color: Colors.black,
-                          fontSize: 13,
+                          fontSize: 17,
                           fontWeight: FontWeight.normal),
                     ),
                     trailing: Row(
                       mainAxisSize: MainAxisSize.min,
                       children: [
-                        IconButton(
-                            tooltip: "Hapus Data",
-                            onPressed: () {
-                              deleteNilai(listNilai[index]["id"]);
-                            },
-                            icon: Icon(
-                              Icons.delete_outline,
-                              color: Colors.red.shade300,
-                              size: 24,
-                            )),
                         IconButton(
                             tooltip: "Edit Data",
                             onPressed: () {
@@ -162,6 +152,17 @@ class _DataNilaiState extends State<DataNilai> {
                               color: Colors.purple,
                               size: 24,
                             )),
+                        IconButton(
+                            tooltip: "Hapus Data",
+                            onPressed: () {
+                              deleteNilai(listNilai[index]["id"]);
+                            },
+                            icon: Icon(
+                              Icons.delete_outline,
+                              color: Colors.red.shade300,
+                              size: 24,
+                            )),
+                        
                       ],
                     ),
                   ),

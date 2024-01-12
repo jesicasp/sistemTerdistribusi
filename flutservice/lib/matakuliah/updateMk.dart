@@ -68,7 +68,7 @@ class _UpdateMatakuliahState extends State<UpdateMatakuliah> {
       ),
       body: Center(
         child: Container(
-          margin: EdgeInsets.fromLTRB(0, 100, 0, 0),
+          margin: EdgeInsets.fromLTRB(0, 20, 0, 0),
           width: 800,
           padding: EdgeInsets.all(16),
           child: Column(
@@ -105,7 +105,7 @@ class _UpdateMatakuliahState extends State<UpdateMatakuliah> {
                 decoration: InputDecoration(
                   labelText: "SKS",
                   hintText: "Ketikkan Jumlah SKS",
-                  prefixIcon: Icon(Icons.numbers_rounded),
+                  prefixIcon: Icon(Icons.scatter_plot_sharp),
                   fillColor: Colors.indigo.shade200,
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10),

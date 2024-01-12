@@ -4,8 +4,6 @@ import 'dart:convert';
 import 'package:flutservice/matakuliah/insertmatakuliah.dart';
 import 'package:flutservice/matakuliah/updateMK.dart';
 
-
-
 class DataMatakuliah extends StatefulWidget {
   const DataMatakuliah({super.key});
 
@@ -89,32 +87,22 @@ class _DataMatakuliahState extends State<DataMatakuliah> {
                       size: 24,
                     ),
                     title: Text(
-                      listMatakuliah[index]["kode"]?.toString() ?? "",
+                      "${listMatakuliah[index]["nama"]?.toString() ?? ""}",
                       style: TextStyle(
                           color: Colors.indigo,
-                          fontSize: 17,
+                          fontSize: 20,
                           fontWeight: FontWeight.bold),
                     ),
                     subtitle: Text(
-                      "Nama : ${listMatakuliah[index]["nama"]?.toString() ?? ""}\nSKS : ${listMatakuliah[index]["sks"]?.toString() ?? ""}",
+                      "Kode : ${listMatakuliah[index]["kode"]?.toString() ?? ""}\nSKS: ${listMatakuliah[index]["sks"]?.toString() ?? ""}",
                       style: TextStyle(
                           color: Colors.black,
-                          fontSize: 13,
+                          fontSize: 17,
                           fontWeight: FontWeight.normal),
                     ),
                     trailing: Row(
                       mainAxisSize: MainAxisSize.min,
                       children: [
-                        IconButton(
-                            tooltip: "Hapus Data",
-                            onPressed: () {
-                              deleteMatakuliah(listMatakuliah[index]["id"]);
-                            },
-                            icon: Icon(
-                              Icons.delete_outline,
-                              color: Colors.red.shade300,
-                              size: 24,
-                            )),
                         IconButton(
                             tooltip: "Edit Data",
                             onPressed: () {
@@ -133,6 +121,16 @@ class _DataMatakuliahState extends State<DataMatakuliah> {
                             icon: Icon(
                               Icons.edit_document,
                               color: Colors.purple,
+                              size: 24,
+                            )),
+                        IconButton(
+                            tooltip: "Hapus Data",
+                            onPressed: () {
+                              deleteMatakuliah(listMatakuliah[index]["id"]);
+                            },
+                            icon: Icon(
+                              Icons.delete_outline,
+                              color: Colors.red.shade300,
                               size: 24,
                             )),
                       ],

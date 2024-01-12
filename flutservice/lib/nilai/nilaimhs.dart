@@ -66,22 +66,22 @@ class _NilaiMahasiswaState extends State<NilaiMahasiswa> {
                   margin: EdgeInsets.all(5),
                   child: ListTile(
                     leading: Icon(
-                      Icons.pin_outlined,
-                      color: Colors.indigo,
+                      Icons.grade_outlined,
+                      color: Colors.amber,
                       size: 24,
                     ),
                     title: Text(
                       listSemua[index]["mahasiswa"]["nama"],
                       style: TextStyle(
                           color: Colors.indigo,
-                          fontSize: 17,
+                          fontSize: 20,
                           fontWeight: FontWeight.bold),
                     ),
                     subtitle: Text(
                       "Matakuliah : ${listSemua[index]["matakuliah"]["nama"]} \nNilai : ${listSemua[index]["nilai"]["nilai"]}",
                       style: TextStyle(
                           color: Colors.black,
-                          fontSize: 13,
+                          fontSize: 17,
                           fontWeight: FontWeight.normal),
                     ),
                   ),
